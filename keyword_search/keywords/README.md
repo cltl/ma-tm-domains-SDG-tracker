@@ -4,7 +4,7 @@ Conventions:
 2. The filename indicates the SDG the keyword list is directed at.
 
 SDGs covered currently:
-1 - poverty
+1 - poverty \n
 5 - gender equality
 9 - sustainable industralization
 11 - safe cities

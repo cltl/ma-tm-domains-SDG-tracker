@@ -1,4 +1,4 @@
-Folder for the keyword lists
+Folder for the keyword lists.
 Conventions:
 1. Keywords are seperated by newlines.
 2. The filename indicates the SDG the keyword list is directed at.

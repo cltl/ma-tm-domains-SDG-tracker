@@ -26,3 +26,4 @@ Naïve keyword lookup: the program is provided a (hand-crafted) keyword list of 
 - a result.tsv file with columns: text,	label (gold),	predictions (BERT),	confidence,	baseline (predictions)
 the confidence value is the absolute value of the distance_function array (distance to hyperplane) rounded to 3 decimal places. 
 
+**end_to_end_classifier_test_FPC** (for public consumption) This file is an updated version of Gigaword_to_classifier. Including Neural Net and output files. 

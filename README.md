@@ -5,7 +5,7 @@
 **random_sample.json** is 10,000 random articles for Jan to play with (tf-idf)
 
 ~~**travel_test_version_threshold_4.json** is a json file containing 6200 texts - half related, half unrelated to SDG1 - this is essentially a shortcut to those who want to experiment with BERT/ NN etc. It can be read straight into a dataframe: df = pd.read_json(filename)~~
-THIS FILE HAS BEEN SUPPLANTED BY THE balanced_df_WITH_aid_with_slave_threshold_4_keep.json FILE - EMAILED AND TO NEW FOLDER 'classify_only'
+THIS FILE HAS BEEN SUPPLANTED BY THE 'balanced_df_WITH_aid_with_slave_threshold_4_keep.json' FILE - EMAILED AND TO NEW FOLDER 'classify_only'
 
 **keyword_search** contains the folder with keyword lists (5 at the moment), and the code to extract related documents (in .json) from the pickled Gigaword corpus by selecting articles containing at least *t* keywords.
 

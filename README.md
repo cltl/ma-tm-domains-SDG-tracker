@@ -9,7 +9,7 @@ THIS FILE WAS UPDATED TO REMOVE DUPLICATES
 
 **keyword_search** contains the folder with keyword lists (5 at the moment), and the code to extract related documents (in .json) from the pickled Gigaword corpus by selecting articles containing at least *t* keywords.
 
-**Gigaword_to_classifier** is our *baseline system* for this task. This classification approach consists of the following steps:
+**Gigaword_to_classifier** is our system for this task. This classification approach consists of the following steps:
 1. Conversion to .json while using a basic filter (one or two words; at least one of them should be present in text or header) (this step is not included in the notebook yet!)
 2. Training data part 1: 
 Naïve keyword lookup: the program is provided a (hand-crafted) keyword list of terms relevant to the SDG our classifier will be trained on. If at least *t* keywords are present, the article gets the label 'related'.

@@ -1,12 +1,5 @@
 # tm-domains
 
-**Keyword_lookup.ipynb** is code for looping over previously extracted pickles to extract filtered json files
-
-**random_sample.json** is 10,000 random articles for Jan to play with (tf-idf)
-
-~~**travel_test_version_threshold_4.json** is a json file containing 6200 texts - half related, half unrelated to SDG1 - this is essentially a shortcut to those who want to experiment with BERT/ NN etc. It can be read straight into a dataframe: df = pd.read_json(filename)~~
-THIS FILE HAS BEEN SUPPLANTED BY THE 'balanced_df_WITH_aid_with_slave_threshold_4_keep.json' FILE - EMAILED AND TO NEW FOLDER 'classify_only'
-
 **keyword_search** contains the folder with keyword lists (5 at the moment), and the code to extract related documents (in .json) from the pickled Gigaword corpus by selecting articles containing at least *t* keywords.
 
 ~~**Gigaword_to_classifier** is our system for this task. This classification approach consists of the following steps:~~
@@ -29,3 +22,12 @@ THIS FILE HAS BEEN SUPPLANTED BY THE 'balanced_df_WITH_aid_with_slave_threshold_
 the confidence value is the absolute value of the distance_function array (distance to hyperplane) rounded to 3 decimal places. 
 
 **end_to_end_classifier_test_FPC** (for public consumption) This file is an updated version of Gigaword_to_classifier. Including Neural Net and output files. 
+
+**Sentiment Analysis** contains the code used to train the sentiment classifier.
+
+**Keyword_lookup.ipynb** is code for looping over previously extracted pickles to extract filtered json files
+
+**random_sample.json** is 10,000 random articles for Jan to play with (tf-idf)
+
+~~**travel_test_version_threshold_4.json** is a json file containing 6200 texts - half related, half unrelated to SDG1 - this is essentially a shortcut to those who want to experiment with BERT/ NN etc. It can be read straight into a dataframe: df = pd.read_json(filename)~~
+THIS FILE HAS BEEN SUPPLANTED BY THE 'balanced_df_WITH_aid_with_slave_threshold_4_keep.json' FILE - EMAILED AND TO NEW FOLDER 'classify_only'

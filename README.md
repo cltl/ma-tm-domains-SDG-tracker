@@ -1,6 +1,16 @@
 # tm-domains
 
+**Folders:**
+
 **keyword_search** contains the folder with keyword lists (5 at the moment), and the code to extract related documents (in .json) from the pickled Gigaword corpus by selecting articles containing at least *t* keywords.
+
+**NEW FOLDER classify_only** This contains a .py script with supporting utils.py and an .xlsx file - assuming a user has the prepared balanced_df_WITH_aid_with_slave_threshold_4_keep.json file and balanced_df_WITH_aid_with_slave_threshold_4_keep_RoBERTa.pkl BERT embeddings pickle this will output:
+- a classification report for the BERT-based system
+- a classification report for the Baseline system
+- a result.tsv file with columns: text,	label (gold),	predictions (BERT),	confidence,	baseline (predictions)
+the confidence value is the absolute value of the distance_function array (distance to hyperplane) rounded to 3 decimal places.
+
+**Sentiment Analysis** contains the code used to train the sentiment classifier.
 
 ~~**Gigaword_to_classifier** is our system for this task. This classification approach consists of the following steps:~~
 ~~1. Conversion to .json while using a basic filter (one or two words; at least one of them should be present in text or header) (this step is not included in the notebook yet!)~~
@@ -15,15 +25,7 @@
 
 **BOW Baseline** - takes the whole  training corpus, lower case with stop words and punctuation removed and trains. Then the test set is fit to this vector model and predictions made. 
 
-**NEW FOLDER classify_only** This contains a .py script with supporting utils.py and an .xlsx file - assuming a user has the prepared balanced_df_WITH_aid_with_slave_threshold_4_keep.json file and balanced_df_WITH_aid_with_slave_threshold_4_keep_RoBERTa.pkl BERT embeddings pickle this will output:
-- a classification report for the BERT-based system
-- a classification report for the Baseline system
-- a result.tsv file with columns: text,	label (gold),	predictions (BERT),	confidence,	baseline (predictions)
-the confidence value is the absolute value of the distance_function array (distance to hyperplane) rounded to 3 decimal places. 
-
 **end_to_end_classifier_test_FPC** (for public consumption) This file is an updated version of Gigaword_to_classifier. Including Neural Net and output files. 
-
-**Sentiment Analysis** contains the code used to train the sentiment classifier.
 
 **Keyword_lookup.ipynb** is code for looping over previously extracted pickles to extract filtered json files
 

@@ -2,19 +2,23 @@
 
 **Folders:**
 
-**keyword_search** contains the folder with keyword lists (5 at the moment), and the code to extract related documents (in .json) from the pickled Gigaword corpus by selecting articles containing at least *t* keywords.
+**Archive** contains code that's not part of any system at the moment, because it is outdated or we decided to use a different technique.
 
-**NEW FOLDER classify_only** This contains a .py script with supporting utils.py and an .xlsx file - assuming a user has the prepared balanced_df_WITH_aid_with_slave_threshold_4_keep.json file and balanced_df_WITH_aid_with_slave_threshold_4_keep_RoBERTa.pkl BERT embeddings pickle this will output:
+**BERT fine tuning** should be self-explanatory
+
+**classify_only** This contains a .py script with supporting utils.py and an .xlsx file - assuming a user has the prepared balanced_df_WITH_aid_with_slave_threshold_4_keep.json file and balanced_df_WITH_aid_with_slave_threshold_4_keep_RoBERTa.pkl BERT embeddings pickle this will output:
 - a classification report for the BERT-based system
 - a classification report for the Baseline system
 - a result.tsv file with columns: text,	label (gold),	predictions (BERT),	confidence,	baseline (predictions)
 the confidence value is the absolute value of the distance_function array (distance to hyperplane) rounded to 3 decimal places.
 
+**keyword_search** contains the folder with keyword lists (5 at the moment), and the code to extract related documents (in .json) from the pickled Gigaword corpus by selecting articles containing at least *t* keywords.
+
 **Sentiment Analysis** contains the code used to train the sentiment classifier.
 
-**correction** Bag of Words is the Baseline system for comparison. It performed really well on the original method (i.e. pre-filter for 'poverty and 'aid ' (step 1 above) - making BERT essentially obsolete. I figured that we were clearly biased towards those two words in our test set, so I went back to square one and used Jan's lexical lookup on the entire dataset (8 million + articles - unfiltered). With *t* keywords set to 4 - it returns around 3000+ articles and the BERT system performs better.
+***Files:***
 
-**BOW Baseline** - takes the whole  training corpus, lower case with stop words and punctuation removed and trains. Then the test set is fit to this vector model and predictions made. 
+**BOW Baseline** - takes the whole  training corpus, lower case with stop words and punctuation removed and trains. Then the test set is fit to this vector model and predictions made. Bag of Words is the Baseline system for comparison. It performed really well on the original method (i.e. pre-filter for 'poverty and 'aid ' (step 1 above) - making BERT essentially obsolete. I figured that we were clearly biased towards those two words in our test set, so I went back to square one and used Jan's lexical lookup on the entire dataset (8 million + articles - unfiltered). With *t* keywords set to 4 - it returns around 3000+ articles and the BERT system performs better.
 
 **end_to_end_classifier_test_FPC** (for public consumption) This file is an updated version of Gigaword_to_classifier. Including Neural Net and output files.
 (outdated) description of the system:
@@ -23,4 +27,3 @@ the confidence value is the absolute value of the distance_function array (dista
 Naïve keyword lookup: the program is provided a (hand-crafted) keyword list of terms relevant to the SDG our classifier will be trained on. If at least *t* keywords are present, the article gets the label 'related'.~~
 3. Training data part 2: a sample of random articles is gathered from the GigaWord corpus and added to the training data.~~
 4. The BERT-model *'bert-base-nli-mean-tokens'* is used to get the sentence embeddings(?); the model is trained. We performed a random split on the training data; our classifier (a SVM) was trained on 2/3 of the articles and tested on 1/3.~~
-

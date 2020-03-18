@@ -30,4 +30,7 @@ Naïve keyword lookup: the program is provided a (hand-crafted) keyword list of 
 
 **BOW Baseline** - takes the whole  training corpus, lower case with stop words and punctuation removed and trains. Then the test set is fit to this vector model and predictions made. Bag of Words is the Baseline system for comparison. It performed really well on the original method (i.e. pre-filter for 'poverty and 'aid ' (step 1 above) - making BERT essentially obsolete. I figured that we were clearly biased towards those two words in our test set, so I went back to square one and used Jan's lexical lookup on the entire dataset (8 million + articles - unfiltered). With *t* keywords set to 4 - it returns around 3000+ articles and the BERT system performs better.
 
-![Flow diagram of classification process](classification flow diagram.png)
+Flow diagram of the classification process:
+<div align="center">
+    <img src="images/classification flow diagram.png" width="800px"</img> 
+</div>

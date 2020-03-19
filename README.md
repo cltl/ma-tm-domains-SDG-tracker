@@ -6,7 +6,11 @@
 
 **BERT fine tuning** should be self-explanatory
 
-**classify_only** This contains a .py script with supporting utils.py and an .xlsx file - assuming a user has the prepared balanced_df_WITH_aid_with_slave_threshold_4_keep.json file and balanced_df_WITH_aid_with_slave_threshold_4_keep_RoBERTa.pkl BERT embeddings pickle this will output:
+**classify_only** This contains a .py script with supporting utils.py and an .xlsx file - assuming a user has the prepared:
+- balanced_df_WITH_aid_with_slave_threshold_4_keep.json file, and 
+- balanced_df_WITH_aid_with_slave_threshold_4_keep_RoBERTa.pkl BERT embeddings pickle 
+
+this will output:
 - a classification report for the BERT-based system
 - a classification report for the Baseline system
 - a result.tsv file with columns: text,	label (gold),	predictions (BERT),	confidence,	baseline (predictions)
@@ -43,7 +47,7 @@ The related and unrelated dataframes are concatenated and pruned to the final le
 
 These are used for two classification methods with the results compared. 
 - SVM
-- MLP 
+- MLP (NN)
 
 
 Flow diagram of the classification process:

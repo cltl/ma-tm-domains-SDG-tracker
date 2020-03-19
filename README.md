@@ -9,6 +9,7 @@
 **classify_only** This contains a .py script with supporting utils.py and an .xlsx file - assuming a user has the prepared:
 - balanced_df_WITH_aid_with_slave_threshold_4_keep.json file, and 
 - balanced_df_WITH_aid_with_slave_threshold_4_keep_RoBERTa.pkl BERT embeddings pickle 
+(please rename these - I was trying to keep up with small changes I was making in the lexicon and with BERT embeddings variants)
 
 this will output:
 - a classification report for the BERT-based system
@@ -48,6 +49,11 @@ The related and unrelated dataframes are concatenated and pruned to the final le
 These are used for two classification methods with the results compared. 
 - SVM
 - MLP (NN)
+
+5. Output:
+- there is a classification report printed to screen for each classifier. 
+- the last cell produces a tsv file containing columns for:
+   (each) 'text', (gold) 'label', 'SVM_predictions', 'SVM_confidence'(distance to hyperplane), 'NN_predictions', 'NN_confidence' (probability), 'Baseline_predictions'
 
 
 Flow diagram of the classification process:

@@ -1,4 +1,27 @@
-# tm-domains
+# SDG-tracker
+
+**The UN Sustainable Development Goals**
+
+Companies are increasingly tasked with acting in a socially responsible manner; how a company is perceived can affect its brand image and consequently its value. Actively contributing towards goals which benefit society and communities is a way in which a company can distinguish itself from its competitors and enhance how brands are perceived by existing and potential customers. Conversely, actions which negatively impact  communities or are perceived to sacrifice long term sustainability for short term goals can pose a risk to a company’s image and the prestige of their brands.
+
+One overarching measure of global performance towards a better, more sustainable society is described by the UN’s <a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals">Sustainable Development Goals (SDGs)</a>. The SDGs set in 2015 by the United Nations General Assembly are a collection of global goals intended to be achieved by the year 2030 and designed to be a "blueprint to achieve a better and more sustainable future for all" (dpicampaigns, 2019).
+
+Companies have acted to incorporate SDG outcomes in their company policy, however, it is insufficient to merely encode these goals in policy documents, and these goals have to be somehow translated into actions and behaviours throughout the company. In large scale corporations, this can be difficult to translate into company culture, and difficult to monitor, especially when subsidiaries and supply chains are taken into account. 
+
+From a business consultancy perspective, monitoring performance on how a company is translating policy into actions is crucial to be able to predict future company performance, yet monitoring large complex multinational organisations is no trivial task, especially around qualitative aims 
+
+One way of monitoring how a company is performing is to monitor public perception directly for evidence of actions that relate to these goals. 
+
+**SDG-tracker**
+SDG-tracker is an effort to assist in the verification of companies' compliance to the UN’s Sustainable Development Goals (SDGs), using Machine Learning. We have developed an application that classifies news articles on their relation to one of the Sustainable Development Goals.
+For this task, we use a BERT-based machine learning approach to determine whether a news article is relevant to one of the SDGs. The training data was created by a lexical lookup on a vast corpus (GigaWord).
+
+**Usage**
+Delivery of the data -> what format should it have?
+
+end_to_end_classifier.ipynb shows the process of creating the training set, the training of the SDG-classifier and the classifier's application on unseen news articles we have extracted manually (the test sets for SDG1 (end all poverty) and SDG12 (sustainable consumption).
+Handcrafted keyword lists are provided for several SDGs, although some of these are short.
+In the folder Sentiment_Analysis, our sentiment classification approach is shown. The idea is to filter whether an article states something positive about a company with regard to one of the SDGs.
 
 **Folders:**
 

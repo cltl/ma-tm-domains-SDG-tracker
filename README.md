@@ -13,6 +13,7 @@ From a business consultancy perspective, monitoring performance on how a company
 One way of monitoring how a company is performing is to monitor public perception directly for evidence of actions that relate to these goals. 
 
 **SDG-tracker**
+
 SDG-tracker is an effort to assist in the verification of companies' compliance to the UN’s Sustainable Development Goals (SDGs), using Machine Learning. We have developed an application that classifies news articles on their relation to one of the Sustainable Development Goals.
 For this task, we use a BERT-based machine learning approach to determine whether a news article is relevant to one of the SDGs. The training data was created by a lexical lookup on a vast corpus (GigaWord).
 
@@ -22,14 +23,11 @@ Delivery of the data -> what format should it have?
 end_to_end_classifier.ipynb shows the process of creating the training set, the training of the SDG-classifier and the classifier's application on unseen news articles we have extracted manually (the test sets for SDG1 (end all poverty) and SDG12 (sustainable consumption).
 Handcrafted keyword lists are provided for several SDGs, although some of these are short.
 In the folder Sentiment_Analysis, our sentiment classification approach is shown. The idea is to filter whether an article states something positive about a company with regard to one of the SDGs.
+classify_only?
 
 **Folders:**
 
-**Archive** contains code that's not part of any system at the moment, because it is outdated or we decided to use a different technique.
-
-**BERT fine tuning** should be self-explanatory
-
-**classify_only** This contains a .py script with supporting utils.py and an .xlsx file - assuming a user has the prepared:
+<u>**classify_only** This contains a .py script with supporting utils.py and an .xlsx file - assuming a user has the prepared:
 - balanced_df_WITH_aid_with_slave_threshold_4_keep.json file, and 
 - balanced_df_WITH_aid_with_slave_threshold_4_keep_RoBERTa.pkl BERT embeddings pickle 
 (please rename these - I was trying to keep up with small changes I was making in the lexicon and with BERT embeddings variants)
@@ -38,7 +36,7 @@ this will output:
 - a classification report for the BERT-based system
 - a classification report for the Baseline system
 - a result.tsv file with columns: text,	label (gold),	predictions (BERT),	confidence,	baseline (predictions)
-the confidence value is the absolute value of the distance_function array (distance to hyperplane) rounded to 3 decimal places.
+the confidence value is the absolute value of the distance_function array (distance to hyperplane) rounded to 3 decimal places.</u>
 
 **Corpus Extraction** contains code to extract (training) data from the Gigaword corpus we are allowed to use for this task.
 

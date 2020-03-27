@@ -1,7 +1,9 @@
 Sentiment Analysis
 
 *Training Data*
+
 **Sentiment analysis training set for classifier.py** 
+
 For the training of our sentiment classifier we made use of the MPQA data-set.
 Only the files containing annotated sentiment (.feat) were used and the explainatory .log files were discarded.
 .feat files were first transformed to .CSV files to make use of the 

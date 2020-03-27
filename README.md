@@ -29,7 +29,7 @@ classify_only?
 
 **keyword_search** contains the folder with keyword lists (5 at the moment), and the code to extract related documents (in .json) from the pickled Gigaword corpus by selecting articles containing at least *t* keywords.
 
-**Sentiment Analysis** contains the code used to train the sentiment classifier.
+**Sentiment Analysis** contains the code used to train the sentiment classifiers, and the pretrained sentiment classifiers.
 
 ***Files:***
 
@@ -50,7 +50,8 @@ a sample of random articles is gathered from the GigaWord corpus and added to th
 
 The related and unrelated dataframes are concatenated and pruned to the final length to produce a 50:50 related : unrelated training set.
 
-**BOW Baseline** - takes the whole training corpus, lowers the case and removes stop words and punctuation before training. The test set is fit to this vector model and predictions are made. Bag of Words is the Baseline system for comparison.
+*BOW Baseline*
+- takes the whole training corpus, lowers the case and removes stop words and punctuation before training. The test set is fit to this vector model and predictions are made. Bag of Words is the Baseline system for comparison.
 
 4. The BERT-model *'roberta-large-nli-mean-tokens'* is used to get the sentence embeddings which are subsequently concatenated to get a single vector representation for each text in the training set. This method is also used to encode the sentences in the test set. 
 

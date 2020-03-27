@@ -25,16 +25,6 @@ In the folder Sentiment_Analysis, our sentiment classification approach is shown
 
 **Corpus Extraction** contains code to extract (training) data from the Gigaword corpus we are allowed to use for this task.
 
-**classify_only** This contains a .py script with supporting utils.py and an .xlsx file - assuming a user has the prepared:
-- balanced_df_WITH_aid_with_slave_threshold_4_keep.json file, and 
-- balanced_df_WITH_aid_with_slave_threshold_4_keep_RoBERTa.pkl BERT embeddings pickle 
-(please rename these - I was trying to keep up with small changes I was making in the lexicon and with BERT embeddings variants)
-This will output:
-- a classification report for the BERT-based system
-- a classification report for the Baseline system
-- a result.tsv file with columns: text,	label (gold),	predictions (BERT),	confidence,	baseline (predictions)
-the confidence value is the absolute value of the distance_function array (distance to hyperplane) rounded to 3 decimal places.
-
 **keyword_search** contains the folder with keyword lists (5 at the moment), and the code to extract related documents (in .json) from the pickled Gigaword corpus by selecting articles containing at least *t* keywords. There is an option to extract TF-IDF scores for they keywords in the document, but this feature was not used for the final system because an inspection of the results did not show a contribution to the task (docs with low TF-IDF scores for their keywords were generally not less related to the SDG than their counterparts obtaining a higher score).
 
 **Sentiment Analysis** contains the code used to train the sentiment classifiers, and the pretrained sentiment classifiers.

@@ -2,7 +2,7 @@
 
 **The UN Sustainable Development Goals**
 
-Companies are increasingly tasked with acting in a socially responsible manner; how a company is perceived can affect its brand image and consequently its value. Actively contributing towards goals which benefit society and communities is a way in which a company can distinguish itself from its competitors and enhance how brands are perceived by existing and potential customers. Conversely, actions which negatively impact  communities or are perceived to sacrifice long term sustainability for short term goals can pose a risk to a company’s image and the prestige of their brands.
+Companies are increasingly tasked with acting in a socially responsible manner; how a company is perceived can affect its brand image and consequently, its value. Actively contributing towards goals which benefit society and communities is a way in which a company can distinguish itself from its competitors and enhance how brands are perceived by existing and potential customers. Conversely, actions which negatively impact  communities or are perceived to sacrifice long term sustainability for short term goals can pose a risk to a company’s image and the prestige of their brands.
 
 One overarching measure of global performance towards a better, more sustainable society is described by the UN’s <a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals">Sustainable Development Goals (SDGs)</a>. The SDGs set in 2015 by the United Nations General Assembly are a collection of global goals intended to be achieved by the year 2030 and designed to be a "blueprint to achieve a better and more sustainable future for all" (dpicampaigns, 2019).
 
@@ -18,7 +18,7 @@ SDG-tracker is an effort to assist in the verification of companies' compliance 
 For this task, we use a BERT-based machine learning approach to determine whether a news article is relevant to one of the SDGs. The training data was created by a lexical lookup on a vast corpus (GigaWord).
 
 The file **end_to_end_classifier.ipynb** shows the process of creating the training set, the training of the SDG-classifier and the classifier's application on unseen news articles we have extracted manually (the test sets for SDG1 (end all poverty) and SDG12 (sustainable consumption).
-Handcrafted keyword lists are provided for several SDGs, although some of these are short (see <a href="/keyword_search/keywords"> keyword_search/keywords</a>.
+Manually created keyword lists are provided for several SDGs, although some of these are short (see <a href="/keyword_search/keywords"> keyword_search/keywords</a>.
 In the folder Sentiment_Analysis, our sentiment classification approach is shown. The idea is to filter whether an article states something positive about a company with regard to one of the SDGs.
 
 **Folders**
@@ -35,7 +35,7 @@ This will output:
 - a result.tsv file with columns: text,	label (gold),	predictions (BERT),	confidence,	baseline (predictions)
 the confidence value is the absolute value of the distance_function array (distance to hyperplane) rounded to 3 decimal places.
 
-**keyword_search** contains the folder with keyword lists (5 at the moment), and the code to extract related documents (in .json) from the pickled Gigaword corpus by selecting articles containing at least *t* keywords. There is an option to extract TF-IDF scores for they keywords in the document, but this feature was not used for the final system because an inspection of the results did not show a contribution to the task (docs with low TF-IDF scores for their keywords were generally not less related to the SDG than their counterparts obtaining a higher score).
+**keyword_search** contains the folder with keyword lists (5 at the moment), and the code to extract related documents (in .json) from the pickled Gigaword corpus by selecting articles containing at least *t* keywords. There is an option to extract TF-IDF scores for the keywords in the document, but this feature was not used for the final system because an inspection of the results did not show a contribution to the task (docs with low TF-IDF scores for their keywords were generally not less related to the SDG than their counterparts obtaining a higher score).
 
 **Sentiment Analysis** contains the code used to train the sentiment classifiers, and the pretrained sentiment classifiers.
 
@@ -49,7 +49,7 @@ There are two potential ways to use it - with the full GigaWord corpus, or with 
 1. The first part of the workflow assumes you have the full GigaWord corpus as a json file (frame_to_rule2.json). This was iteratively constructed by filtering <a href="https://catalog.ldc.upenn.edu/LDC2003T05">the Gigaword corpus</a> and extracting the headlines and first five sentences in several stages. The first step is to load the entire dataframe into memory (memory intensive but allows the filtering section to be performed quickly).
 
 2. Training data part 1: 
-Naïve keyword lookup: the program is provided a (hand-crafted) keyword list of terms relevant to the SDG our classifier will be trained on. If at least *t* keywords are present, the article gets the label 'related'. Duplicate texts are dropped at. (in the system as it now stands, *t* is set to 4. 
+Naïve keyword lookup: the program is provided a manually created keyword list of terms relevant to the SDG our classifier will be trained on. If at least *t* keywords are present, the article gets the label 'related'. Duplicate texts are dropped at. (in the system as it now stands, *t* is set to 4. 
 
 3. Training data part 2: 
 a sample of random articles is gathered from the GigaWord corpus and added to the training data. 

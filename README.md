@@ -17,17 +17,15 @@ One way of monitoring how a company is performing is to monitor public perceptio
 SDG-tracker is an effort to assist in the verification of companies' compliance to the UN’s Sustainable Development Goals (SDGs), using Machine Learning. We have developed an application that classifies news articles on their relation to one of the Sustainable Development Goals.
 For this task, we use a BERT-based machine learning approach to determine whether a news article is relevant to one of the SDGs. The training data was created by a lexical lookup on a vast corpus (GigaWord).
 
-**Usage**
-Delivery of the data -> what format should it have?
-
-end_to_end_classifier.ipynb shows the process of creating the training set, the training of the SDG-classifier and the classifier's application on unseen news articles we have extracted manually (the test sets for SDG1 (end all poverty) and SDG12 (sustainable consumption).
-Handcrafted keyword lists are provided for several SDGs, although some of these are short.
+The file **end_to_end_classifier.ipynb** shows the process of creating the training set, the training of the SDG-classifier and the classifier's application on unseen news articles we have extracted manually (the test sets for SDG1 (end all poverty) and SDG12 (sustainable consumption).
+Handcrafted keyword lists are provided for several SDGs, although some of these are short (see <a href="/keyword_search/keywords"> keyword_search/keywords</a>.
 In the folder Sentiment_Analysis, our sentiment classification approach is shown. The idea is to filter whether an article states something positive about a company with regard to one of the SDGs.
-classify_only?
+
+**Folders**
 
 **Corpus Extraction** contains code to extract (training) data from the Gigaword corpus we are allowed to use for this task.
 
-**keyword_search** contains the folder with keyword lists (5 at the moment), and the code to extract related documents (in .json) from the pickled Gigaword corpus by selecting articles containing at least *t* keywords.
+**keyword_search** contains the folder with keyword lists (5 at the moment), and the code to extract related documents (in .json) from the pickled Gigaword corpus by selecting articles containing at least *t* keywords. There is an option to extract TF-IDF scores for they keywords in the document, but this feature was not used for the final system because an inspection of the results did not show a contribution to the task (docs with low TF-IDF scores for their keywords were generally not less related to the SDG than their counterparts obtaining a higher score).
 
 **Sentiment Analysis** contains the code used to train the sentiment classifiers, and the pretrained sentiment classifiers.
 

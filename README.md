@@ -77,3 +77,19 @@ Flow diagram of the classification process:
 <div align="center">
     <img src="images/classification flow diagram.png" width="800px"</img> 
 </div>
+
+**Acknowledgement**
+
+This project was created as an assignment of the MA Text Mining, offered by the CLTL at Vrije Universiteit, Amsterdam.
+
+**Authors**
+
+Adam Tucker
+
+Jan van Casteren
+
+Merel de Groot
+
+Michiel van Nederpelt
+
+Peter Caine

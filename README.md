@@ -80,7 +80,7 @@ Flow diagram of the classification process:
 
 **Acknowledgement**
 
-This project was created as an assignment of the MA Text Mining, offered by the CLTL at Vrije Universiteit, Amsterdam.
+This project was created as part of the course Text Mining Domains, offered by CLTL at Vrije Universiteit, Amsterdam.
 
 **Authors**
 

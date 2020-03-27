@@ -25,19 +25,6 @@ Handcrafted keyword lists are provided for several SDGs, although some of these 
 In the folder Sentiment_Analysis, our sentiment classification approach is shown. The idea is to filter whether an article states something positive about a company with regard to one of the SDGs.
 classify_only?
 
-**Folders:**
-
-<u>**classify_only** This contains a .py script with supporting utils.py and an .xlsx file - assuming a user has the prepared:
-- balanced_df_WITH_aid_with_slave_threshold_4_keep.json file, and 
-- balanced_df_WITH_aid_with_slave_threshold_4_keep_RoBERTa.pkl BERT embeddings pickle 
-(please rename these - I was trying to keep up with small changes I was making in the lexicon and with BERT embeddings variants)
-
-this will output:
-- a classification report for the BERT-based system
-- a classification report for the Baseline system
-- a result.tsv file with columns: text,	label (gold),	predictions (BERT),	confidence,	baseline (predictions)
-the confidence value is the absolute value of the distance_function array (distance to hyperplane) rounded to 3 decimal places.</u>
-
 **Corpus Extraction** contains code to extract (training) data from the Gigaword corpus we are allowed to use for this task.
 
 **keyword_search** contains the folder with keyword lists (5 at the moment), and the code to extract related documents (in .json) from the pickled Gigaword corpus by selecting articles containing at least *t* keywords.
@@ -46,12 +33,12 @@ the confidence value is the absolute value of the distance_function array (dista
 
 ***Files:***
 
-**end_to_end_classifier_test_FPC** (for public consumption) This file is an updated version of Gigaword_to_classifier. Including Neural Net and output files.
+**end_to_end_classifier_test_FPC** 
 
 Description of the system. 
 There are two potential ways to use it - with the full GigaWord corpus, or with copies of files which have been filtered. 
 
-1. The first part of the workflow assumes you have the full GigaWord corpus as a json file (frame_to_rule2.json). This was iteratively constructed by filtering the Gigaword corpus and extracting the headlines and first five sentences in several stages. Ask Peter or Jan for a copy (7GB+). The first step is to load the entire dataframe into memory (memory intensive but allows the filtering section to be performed quickly)
+1. The first part of the workflow assumes you have the full GigaWord corpus as a json file (frame_to_rule2.json). This was iteratively constructed by filtering <a href="https://catalog.ldc.upenn.edu/LDC2003T05">the Gigaword corpus</a> and extracting the headlines and first five sentences in several stages. The first step is to load the entire dataframe into memory (memory intensive but allows the filtering section to be performed quickly).
 
 2. Training data part 1: 
 Naïve keyword lookup: the program is provided a (hand-crafted) keyword list of terms relevant to the SDG our classifier will be trained on. If at least *t* keywords are present, the article gets the label 'related'. Duplicate texts are dropped at. (in the system as it now stands, *t* is set to 4. 

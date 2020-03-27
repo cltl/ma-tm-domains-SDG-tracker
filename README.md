@@ -41,6 +41,8 @@ the confidence value is the absolute value of the distance_function array (dista
 
 ***Files:***
 
+**Legals report Text Mining Domains** is the full application report, containing a description of the system, error analysis and recommendations for futher development.
+
 **end_to_end_classifier_test_FPC** 
 
 Description of the system. 

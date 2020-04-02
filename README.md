@@ -95,3 +95,5 @@ Merel de Groot
 Michiel van Nederpelt
 
 Peter Caine
+
+Supervisor: prof. dr. P.T.J.M. Vossen. Computational Lexicology & Terminology Lab, Vrije Universiteit Amsterdam.

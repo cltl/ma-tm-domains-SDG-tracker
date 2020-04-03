@@ -1,4 +1,6 @@
 # SDG-tracker
+This repository contains a student project for the MA Text Mining course Text Mining Domains.
+2020, Vrije Universiteit, Amsterdam
 
 **The UN Sustainable Development Goals**
 
@@ -96,4 +98,6 @@ Michiel van Nederpelt
 
 Peter Caine
 
-Supervisor: prof. dr. P.T.J.M. Vossen. Computational Lexicology & Terminology Lab, Vrije Universiteit Amsterdam.
+Supervisor: prof. dr. P.T.J.M. Vossen.
+
+Computational Lexicology & Terminology Lab, Vrije Universiteit Amsterdam.

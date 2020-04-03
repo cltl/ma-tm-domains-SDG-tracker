@@ -1,6 +1,6 @@
 # SDG-tracker
 This repository contains a student project for the MA Text Mining course Text Mining Domains.
-2020, Vrije Universiteit, Amsterdam
+2020, Vrije Universiteit, Amsterdam.
 
 **The UN Sustainable Development Goals**
 

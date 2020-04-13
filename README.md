@@ -27,6 +27,8 @@ In the folder Sentiment_Analysis, our sentiment classification approach is shown
 
 **Corpus Extraction** contains code to extract (training) data from the Gigaword corpus we are allowed to use for this task.
 
+**Pretrained classifiers related-unrelated** contains pretrained classifiers for SDGs 1 and 12.
+
 **classify_only** This contains a .py script with supporting utils.py and an .xlsx file - assuming a user has the prepared:
 - balanced_df_WITH_aid_with_slave_threshold_4_keep.json file, and 
 - balanced_df_WITH_aid_with_slave_threshold_4_keep_RoBERTa.pkl BERT embeddings pickle 
